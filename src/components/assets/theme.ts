@@ -13,6 +13,7 @@ const zurichTheme:Theme = {
     modalHeader: '1.5rem',
     cardHeader: '1.25rem',
     body: '1rem',
+    error: '.8rem'
   },
   colors: {
     textDefault: '#342f24',
@@ -20,7 +21,8 @@ const zurichTheme:Theme = {
     primary: '#cc3f34',
     primaryDark: '#802620',
     primaryLight: '#ff6357',
-    overlay: 'rgba(0,0,0,.6)'
+    overlay: 'rgba(0,0,0,.6)',
+    borders: '#878681',
   },
   breakpoints: {
     tablet: breakpoints[0],

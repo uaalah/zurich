@@ -1,23 +1,12 @@
 import styled from 'styled-components'
 import {
-  flexbox,
-  FlexboxProps,
   layout,
   LayoutProps,
-  color,
-  ColorProps,
-  typography,
-  TypographyProps,
   space,
   SpaceProps,
   border,
   BorderProps,
-  shadow,
-  ShadowProps,
-  position,
-  PositionProps,
   compose,
-  variant,
 } from 'styled-system'
 
 type ModalBoxProps = SpaceProps & LayoutProps & BorderProps

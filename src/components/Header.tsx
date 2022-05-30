@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Box, ButtonDisplay, Text } from '../styles';
+import AddCardForm from './forms/AddCardForm';
 import Modal from './Modal';
 import Portal from './Portal';
 
@@ -33,7 +34,7 @@ const Header: FC = () => {
     {viewModal && (
       <Portal id="newCard">
         <Modal closeAction={HandlerClose} titulo="Nueva tarjeta">
-          modal modal
+          <AddCardForm closeAction={HandlerClose} />
         </Modal>
       </Portal>
     )}

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import './index.css';
+import zurichStore from './redux';
 import ZurichApp from './ZurichApp';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +11,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ZurichApp />
+    <Provider store={zurichStore}>
+      <ZurichApp />
+    </Provider>
   </React.StrictMode>
 );
 

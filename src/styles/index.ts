@@ -19,7 +19,8 @@ import {
   compose,
 } from 'styled-system'
 
-export * from './modalStyles';
+export * from './modalStyles'
+export * from './formStyles'
 
 type GenericProps = FlexboxProps & LayoutProps & ColorProps & TypographyProps & SpaceProps & BorderProps & ShadowProps & PositionProps;
 type TextProps = SpaceProps & ColorProps & TypographyProps & LayoutProps & PositionProps;
