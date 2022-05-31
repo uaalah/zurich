@@ -23,6 +23,7 @@ const zurichTheme:Theme = {
     primaryLight: '#ff6357',
     overlay: 'rgba(0,0,0,.6)',
     borders: '#878681',
+    white: '#fcfcfc'
   },
   breakpoints: {
     tablet: breakpoints[0],
@@ -48,8 +49,9 @@ const zurichTheme:Theme = {
     rounded: '50%',
   },
   zIndices:{
+    dropDown: 50,
     overlay: 100,
-    modal: 101
+    modal: 101,
   },
 }
 

@@ -21,11 +21,13 @@ const AddCardForm: FC<IAddCardForm> = ({ closeAction }) => {
     titulo: '',
     descripcion: '',
     url: '',
+    date: 0
   })
   const [error, setError] = useState<IFormValidation>({
     titulo: true,
     descripcion: true,
     url: true,
+    date: false
   })
   const { titulo, descripcion, url } = formState
   
@@ -64,7 +66,10 @@ const AddCardForm: FC<IAddCardForm> = ({ closeAction }) => {
     setUpdate(true)
     const checkValid = Object.values(error).includes(true)
     if (!checkValid) {
-      const newStack:ICardProps[] = [...currentStack, formState]
+      const fecha:Date = new Date()
+      const date:number = fecha.getTime()
+      const newCard = {...formState, date: date}
+      const newStack:ICardProps[] = [...currentStack, newCard]
       dispatch(setCards(newStack))
       closeAction()
     }

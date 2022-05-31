@@ -21,6 +21,7 @@ import {
 
 export * from './modalStyles'
 export * from './formStyles'
+export * from './cardStyles'
 
 type GenericProps = FlexboxProps & LayoutProps & ColorProps & TypographyProps & SpaceProps & BorderProps & ShadowProps & PositionProps;
 type TextProps = SpaceProps & ColorProps & TypographyProps & LayoutProps & PositionProps;
@@ -91,13 +92,24 @@ export const ButtonDisplay = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   &:hover{
     background-color: ${ props => props.theme.colors.primaryLight};
-    cursor: pointer;
   }
   &:active{
     background-color: ${ props => props.theme.colors.primaryDark};
-    cursor: pointer;
+  }
+
+  &.outline {
+    color: ${ props => props.theme.colors.textDefault};
+    background-color: rgba(255, 255, 255, .8);
+    border: 1px solid ${ props => props.theme.colors.borders};
+    white-space: nowrap;
+    transition: .3s all;
+    &:hover{
+      border-color: ${ props => props.theme.colors.primary};
+      background-color: #fff;
+    }
   }
   
   ${compose(
@@ -107,4 +119,10 @@ export const ButtonDisplay = styled.button<ButtonProps>`
     position,
     border,
   )}
+`
+
+export const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  height: 14rem;
 `
